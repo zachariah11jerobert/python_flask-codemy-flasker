@@ -4,12 +4,9 @@ from flask import Flask , render_template
 app = Flask(__name__)
 
 # Create a route decorater
-@app.route('/')
-def index():
-    return "<h1>Hello World !!! </h1>"
 
 @app.route('/home')
-def home():
+def index():
     # -----------Filters--------
     #safe
     #capitalize
@@ -33,11 +30,6 @@ def home():
 # localhost:5000/user/john
 @app.route('/user/<name>')
 def user(name):
-    return "<h1>Hello {} </h1>".format(name)
-
-# localhost:5000/user/john
-@app.route('/usertemplate/<name>')
-def userTemplate(name):
     return render_template("user.html",user_name=name)
 
 # Create Custom Error Pages
