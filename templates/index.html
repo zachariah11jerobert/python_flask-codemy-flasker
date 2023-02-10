@@ -1,0 +1,25 @@
+<h1>Hello World !!!</h1>
+
+<p>This is mY First Web Page</p>
+
+<p>My name is {{first_name}}</p>
+
+<p>{{title | capitalize}}</p>
+<p>{{stuff}}</p>
+<p>{{stuff | safe}}</p>
+<p>{{stuff | striptags}}</p>
+
+<h4>Favourite Pizza</h4>
+<div>{{favourite_pizza}}</div>
+<ul>
+{% for topping in favourite_pizza %}
+    <li>{{topping}}</li>
+{% endfor %}
+</ul>
+
+<div>
+    <h5>Access by Index</h5>
+    {{favourite_pizza.0}}<br/>
+    {{favourite_pizza.1}}<br/>
+    {{favourite_pizza.2}}<br/>
+</div>
